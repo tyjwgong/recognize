@@ -1,0 +1,24 @@
+server:
+  tomcat:
+    max-threads: 1024
+    accept-count: 1024
+  port: ${SERVER_PORT:8080}
+##################################################
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB
+###################################################
+swagger:
+  enabled: true
+  base-package: com.yun.game
+  exclude-path: /error,/actuator/**
+  contact:
+    name: yun
+    email: yun@XXX.com
+  title: IMAGE
+  ui-config:
+    json-editor: true
+
